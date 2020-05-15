@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "../styles.css";
 import { books } from "./BooksData";
 import { ThemContext } from "../contexts/ThemeContext";
+import Book from "./Book";
 
 const BookList = () => {
   const { isLightTheme, light, dark } = useContext(ThemContext);
@@ -14,9 +15,7 @@ const BookList = () => {
       <h1>Book List</h1>
       <ul>
         {books.map((book) => (
-          <li style={{ background: theme.ui }} key={book.id}>
-            {book.title}
-          </li>
+          <Book key={book.id} {...book} />
         ))}
       </ul>
     </div>
