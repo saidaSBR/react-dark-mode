@@ -29,7 +29,6 @@ body {
 
 .book-list {
   margin: auto;
-
   border-radius: var(--mainBorderRadius);
   max-width: var(--fullWidth);
 }
