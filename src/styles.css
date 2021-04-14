@@ -7,16 +7,10 @@ body {
   text-align: center;
 }
 :root {
-  --mainWhite: #fff;
-  --mainBackground: #f8f8f8;
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
-  --maxWidth: 40rem;
   --fullWidth: 1170px;
 }
 
@@ -33,11 +27,12 @@ body {
   max-width: var(--fullWidth);
 }
 .book-list ul {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  margin: auto;
+  padding: 0;
 }
 .book-list li {
-  margin: 5px 20px 30px;
+  margin: 0 50px 28px 0;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   grid-template-rows: auto 1fr;

@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
-import { ThemContext } from "../contexts/ThemeContext";
+import React from "react";
 import "../styles.css";
 
 const Book = ({ image, title, author }) => {
-  const { isLightTheme, light, dark } = useContext(ThemContext);
-  const theme = isLightTheme ? light : dark;
   return (
     <li>
       <div>
