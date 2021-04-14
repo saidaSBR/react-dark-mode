@@ -6,7 +6,7 @@ const Book = ({ image, title, author }) => {
   const { isLightTheme, light, dark } = useContext(ThemContext);
   const theme = isLightTheme ? light : dark;
   return (
-    <li style={{ color: theme.syntax, background: theme.bg }}>
+    <li>
       <div>
         <img src={image} alt={title} />
       </div>

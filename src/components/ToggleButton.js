@@ -6,12 +6,15 @@ import Brightness4RoundedIcon from "@material-ui/icons/Brightness4Rounded";
 import Brightness3RoundedIcon from "@material-ui/icons/Brightness3Rounded";
 
 const ToggleButton = () => {
-  const { toggleTheme } = useContext(ThemContext);
+  const { toggleTheme, isLightTheme, light, dark } = useContext(ThemContext);
+  const theme = isLightTheme ? light : dark;
   return (
     <Switch
       className="toggle-button"
-      checkedChildren={<Brightness3RoundedIcon onClick={toggleTheme} />}
-      unCheckedChildren={<Brightness4RoundedIcon onClick={toggleTheme} />}
+      style={{ background: theme.bg }}
+      onClick={toggleTheme}
+      checkedChildren={<Brightness3RoundedIcon />}
+      unCheckedChildren={<Brightness4RoundedIcon />}
       defaultChecked
     />
   );

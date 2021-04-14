@@ -12,7 +12,7 @@ const BookList = () => {
       className="book-list"
       style={{ color: theme.syntax, background: theme.bg }}
     >
-      <h1>Book List</h1>
+      <h1>Books List</h1>
       <ul>
         {books.map((book) => (
           <Book key={book.id} {...book} />
